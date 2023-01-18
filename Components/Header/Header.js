@@ -5,6 +5,7 @@ import Image from "next/image";
 import MobileBar from "@/Images/Icon/mobile__bar";
 import {useRouter} from "next/router";
 import Link from "next/link";
+import {MdOutlineClose} from "react-icons/md"
 
 const Header = () => {
 
@@ -28,7 +29,7 @@ const Header = () => {
               alt="logo"
             />
           </div>
-          <ul className={`${s.nav} ${mobileMenu ?  s.nav__open : ""}`}>
+          <ul className={`${s.nav} ${mobileMenu ? s.nav__open : ""}`}>
             <li className={s.nav__item}>
               <Link
                 href="/"
@@ -77,10 +78,15 @@ const Header = () => {
                 Review
               </Link>
             </li>
+            <li className={s.nav__close__icon} onClick={handleMobileMenu}>
+              <MdOutlineClose size={30} />
+            </li>
           </ul>
           <div className={s.btn}>
             <div className="btn__sign__in">
-                <Link href="/" className="button">Sign In</Link>
+              <Link href="/" className="button">
+                Sign In
+              </Link>
             </div>
             <div className={s.btn__mobile} onClick={handleMobileMenu}>
               <MobileBar />

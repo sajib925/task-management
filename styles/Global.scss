@@ -150,14 +150,19 @@ a {
   font-family: $sora;
   font-style: normal;
   font-weight: $weight-normal;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 12px;
   text-align: center;
   border-radius: 8px;
   border: 1px solid $secondary;
   background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding: 8px 28px;
+  padding: 8px 18px;
   display: inline-block;
+  @media ($tablet) {
+    padding: 8px 28px;
+    font-size: 16px;
+  line-height: 24px;
+  }
 }
