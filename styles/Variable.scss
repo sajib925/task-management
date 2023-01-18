@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+
+//Media Breakpoints Min
+
+$phone: "min-width:576px";
+$tablet: "min-width:768px";
+$desktop: "min-width:992px";
+$large-screen: "min-width:1440px";
+
+
+// Media Breakpoints Max
+
+$phone_max: "max-width:576px";
+$tablet_max: "max-width:768px";
+$desktop_max: "max-width:992px";
+$large-screen_max: "max-width:1440px";
+
+// Font Weight
+
+$weight-normal: 400;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+$extra-weight-bold: 800;
+
+// Font Family
+$sora: 'Sora', sans-serif;
+
+// Color
+
+$primary:  #F9F9F9;
+$secondary:  #858B93;
+$btnColor: linear-gradient(90deg, #EB9204 -33.14%, #83E868 116.38%);
+$bg: #131517;
+$navLinkBar: #6aea5c;
+$black: #000;

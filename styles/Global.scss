@@ -1,0 +1,163 @@
+@use "variable" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: $bg;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media ($phone) {
+    max-width: 768px;
+  }
+  @media ($tablet) {
+    max-width: 912px;
+  }
+
+  @media ($desktop) {
+    max-width: 1200px;
+  }
+
+  @media ($large-screen) {
+    max-width: 1200px;
+  }
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1,
+.h1 {
+  font-size: 30px;
+  line-height: 38px;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  font-weight: $weight-bold;
+  font-family: $sora;
+  color: $primary;
+
+  @media ($tablet) {
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  @media ($desktop) {
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+  line-height: 38px;
+  font-family: $sora;
+  font-weight: $weight-semi-bold;
+  color: $primary;
+
+  @media ($tablet) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  @media ($desktop) {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 18px;
+  line-height: 23px;
+  font-family: $sora;
+  font-weight: $weight-semi-bold;
+  color: $primary;
+
+  @media ($desktop) {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+  line-height: 25px;
+  font-family: $sora;
+  font-weight: $weight-semi-bold;
+  letter-spacing: 0.01em;
+
+  @media ($desktop) {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+h5,
+.h5 {
+  font-style: normal;
+  font-weight: $weight-semi-bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: $primary;
+
+  @media ($desktop) {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+p,
+.p {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: $sora;
+  font-weight: $weight-normal;
+  color: $secondary;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  font-family: $sora;
+  font-style: normal;
+  font-weight: $weight-normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid $secondary;
+  background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 8px 28px;
+  display: inline-block;
+}

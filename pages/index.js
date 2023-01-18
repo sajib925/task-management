@@ -1,7 +1,11 @@
+import Header from "@/Components/Header/Header";
+import Hero from "@/Sections/Home/Hero/Hero";
+
 const Home = () => {
   return (
     <>
-      <h1>hello</h1>
+      <Header />
+      <Hero />
     </>
   );
 };

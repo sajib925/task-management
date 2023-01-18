@@ -1,0 +1,81 @@
+@use "../../styles/Variable.scss" as *;
+
+.header {
+  padding-top: 43px;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+
+  @media ($tablet_max) {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: $black;
+    width: 100%;
+    height: 100%;
+    z-index: 1111;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__item {
+    &__link {
+      position: relative;
+      font-family: $sora;
+      font-style: normal;
+      font-weight: $weight-normal;
+      font-size: 16px;
+      line-height: 24px;
+      color: $secondary;
+      transition: all ease-in-out 0.3s;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: $navLinkBar;
+      }
+      &:hover::before {
+        width: 50%;
+      }
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.nav__open {
+  left: 0;
+  transition: all ease-in-out 0.3s;
+}
+
+.nav__active {
+  color: $primary;
+
+  &::before {
+    width: 50%;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 44px;
+
+  &__mobile {
+    display: block;
+    @media ($tablet) {
+      display: none;
+    }
+  }
+}
